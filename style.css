@@ -1,0 +1,38 @@
+@import url('./reset.css');
+@import url('./styles/header.css');
+@import url('./styles/logging.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('./styles/home.css');
+@import url('./styles/Sobre.css');
+@import url('./styles/eventos.css');
+@import url('./styles/contatos.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root {
+    --cor-navLinks: #370000;
+    --size-navLinks: 1.4rem;
+    --fonte-padrao: "Inter", sans-serif;
+    --fonte-texto: "Playfair Display", serif;
+}
+
+html {
+    height: 100%;
+    font-family: var(--fonte-padrao);
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+::selection {
+    background-color: var(--cor-navLinks);
+    color: white;
+}

@@ -1,0 +1,98 @@
+.cotatos {
+    height: 100vh;
+    text-align: center;
+    max-width: 340px;
+    margin: auto;
+}
+
+.cotatos h2{
+    margin-top: 60px;
+    font-weight: 700;
+    background-image: url('../assets/backgroundHeader.svg');
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+
+.cotatos h3{
+    margin-top: 100px;
+}
+
+.cotatos p {
+    margin: 50px;
+}
+
+.contatos__img--links a:nth-child(2) img:hover {
+    content: url('../assets/instagramHover.svg');
+}
+
+.contatos__img--links a:nth-child(1) img:hover {
+    content: url('../assets/whatsAppHover.svg');
+}
+
+.contatos__links h4 {
+    margin-bottom: 20px;
+}
+
+.contatos__img--links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sep {
+    display: none;
+}
+
+
+@media (min-width: 720px) {
+    .cotatos {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    footer a{
+        display: none;
+    }
+
+    .contatos__info {
+        display: grid;
+        grid-template-columns: 1fr 0.1fr 1fr;
+        align-items: center;
+    }
+
+    .contatos__links a:nth-child(2) img:hover {
+        content: url('../assets/instagramHover.svg');
+    }
+
+    .contatos__links a:nth-child(1) img:hover {
+        content: url('../assets/whatsAppHover.svg');
+    }
+
+    .contatos__texto p {
+        font-size: 1.4rem;
+    }
+
+    .cotatos h2 {
+        font-size: 2.4rem;
+    }
+
+    .cotatos h3 {
+        margin-top: 25%;
+    }
+
+    .sep {
+        display: block;
+        height: 40vh;
+        width: 4px;
+    }
+}
+
+@media (min-width:1080px){
+    .cotatos h3{
+        margin-top: 10vh;
+    }
+}

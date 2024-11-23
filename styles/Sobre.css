@@ -1,0 +1,92 @@
+.sobre  {
+    height: 100vh;
+    position: relative;
+}
+
+.sobre__img {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ellipse {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+
+.sobre__texto {
+    max-width: 340px;
+    margin: auto;
+}
+
+.sobre__texto h2 {
+    font-weight: 700;
+    background-image: url('../assets/backgroundHeader.svg');
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+
+.sobre__texto p {
+    margin-top: 40px;
+    text-align: justify;
+    font-weight: 600;
+    hyphens: auto;
+    font-size: 1.1rem;
+}
+
+.img__churrasqueiro {
+    z-index: 1000;
+}
+
+@media (min-width: 720px) {
+
+    .img__churrasqueiro{
+        width: 50%;
+    }
+
+    .sobre__texto {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .sobre__texto h2 {
+        font-size: 3rem;
+    }
+
+    .sobre__texto p{
+        font-size: 1.5rem;
+    }
+
+    .ellipse {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .sobre {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .ellipse {
+        width: 45%;
+    }
+
+    .sobre__texto {
+        max-width: 1080px;
+        margin: auto;
+        margin-right: 10px;
+    }
+}

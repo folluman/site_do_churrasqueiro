@@ -1,0 +1,113 @@
+.imagens{
+    height: auto;
+    text-align: center;
+    background-image: url('../assets/backgroundFotos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.imagens__format {
+    max-width: 340px;
+    margin: auto;
+    text-align: center;
+}
+
+.imagens__format h2{
+    color: var(--cor-navLinks);
+    padding-top: 40px;
+    font-weight: 700;
+}
+
+.imagens__conteudo--eventos, .imagens__conteudo--churrascos {
+    margin-top: 40px;
+    padding: 4%;
+}
+
+.imagens__conteudo--eventos p, .imagens__conteudo--churrascos p {
+    text-align: justify;
+    margin-top: 40px;
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+}
+
+.carousel-indicators li.active{
+    background-color: var(--cor-navLinks) !important;
+}
+
+.imagens__conteudo--churrascos h3, .imagens__conteudo--eventos h3{
+    color: var(--cor-navLinks);
+}
+
+.imagens__conteudo--churrascos p, .imagens__conteudo--eventos p{
+    font-weight: 600;
+    hyphens: auto;
+}
+
+.carousel-inner {
+    height: 40vh;
+}
+
+.carousel-item {
+    height: 40vh;
+}
+
+@media (min-width: 720px) {
+
+    .imagens__format {
+        max-width: 720px;
+        margin: auto;
+    }
+
+
+    .carousel-inner {
+        height: 60vh;
+    }
+
+    .carousel-item {
+        height: 60vh;
+    }
+
+    .imagens__conteudo--churrascos h3, .imagens__conteudo--eventos h3{
+        font-size: 2rem;
+    }
+
+    .imagens__conteudo--churrascos p, .imagens__conteudo--eventos p{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+
+@media (min-width:1080px) {
+    
+    .imagens__format {
+        max-width: 1080px;
+        margin: auto;
+    }
+
+    .imagens__conteudo--eventos, .imagens__conteudo--churrascos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        gap: 10%;
+        max-width: 1080px;
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .imagens__conteudo--eventos p, .imagens__conteudo--churrascos p {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .imagens__conteudo--div2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}

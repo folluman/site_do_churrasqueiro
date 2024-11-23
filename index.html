@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED Barbecue</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="./scripts.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+    <!-- retirar o hidden futuramente -->
+    <main class="site__logging">
+
+        <img src="./assets/logo.svg" alt="" class="logging__logo">
+        <img src="./assets/logging.svg" alt="" class="logging__load">
+
+    </main>
+
+    <!-- colocar o hidden futuramente-->
+    <main class="site__body hidden">
+        <!-- Header -->
+        <section class="section__header">
+            <header class="header">
+                <div class="header__menu">
+                    <img src="./assets/logo.svg" alt="Logo do Churrasqueiro" class="img__Logo">
+                    <img src="./assets/menu_hamburguer.svg" alt="Menu Hamburguer" class="img__menuHamburguer">
+                    <ol class="nav__ol">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#fotos">Fotos</a></li>
+                        <li><a href="#contatos">Contatos</a></li>
+                    </ol>
+                </div>
+            </header>
+            <div class="header__links hidden">
+                <li class="nav_links hidden"><a href="#sobre">Sobre</a></li>
+                <li class="nav_links hidden"><a href="#fotos">Fotos</a></li>
+                <li class="nav_links hidden"><a href="#contatos">Contatos</a></li>
+            </div>
+        </section>
+
+        <!-- carousel -->
+        <section class="home">
+            <h1 class="home__apresentacao">Bem-Vindo ao seu melhor churrasco!</h1>
+        </section>
+
+        <!-- Sobre -->
+        <section class="sobre" id="sobre">
+            <img src="./assets/Ellipse.svg" alt="" class="ellipse">
+            <div class="sobre__img">
+                <img src="./assets/churrasqueiro.svg" alt="Imagem do churrasqueiro" class="img__churrasqueiro">
+            </div>
+            <div class="sobre__texto">
+                <h2>Sobre</h2>
+                <p class="sobre__paragrafo">Com 15 anos de experiência, Edilson é especialista em churrasco para
+                    eventos, oferecendo um serviço
+                    profissional e completo. Seu buffet inclui cortes selecionados e acompanhamentos frescos, preparados
+                    com técnica e cuidado, para que cada detalhe transforme seu evento em uma experiência única.
+                </p>
+            </div>
+        </section>
+
+        <!-- Fotos -->
+        <section class="imagens" id="fotos">
+            <div class="imagens__format">
+                <h2>Eventos & Churrascos</h2>
+                <div class="imagens__conteudo--eventos">
+                    <div class="imagens__conteudo--div">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"
+                                    style="background-image: url(./assets/imageEventos1.svg); background-size: cover; background-repeat: no-repeat;  background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos2.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos3.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos4.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos5.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos6.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos7.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imageEventos8.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Próximo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Eventos</h3>
+                        <p class="eventos__texto">Oferecemos um serviço profissional de churrasco para eventos de todos
+                            os tamanhos, com um buffet
+                            completo que atende os mais variados gostos. Cada evento é cuidadosamente planejado para
+                            proporcionar uma experiência única, com cortes selecionados e acompanhamentos frescos que
+                            valorizam o sabor e a tradição do verdadeiro churrasco brasileiro. <br> Seja para
+                            confraternizações, casamentos, aniversários ou eventos corporativos, garantimos qualidade,
+                            praticidade e sabor em cada detalhe.
+                        </p>
+                    </div>
+                </div>
+                <div class="imagens__conteudo--churrascos">
+                    <div class="imagens__conteudo--div2">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"
+                                    style="background-image: url(./assets/imagemChurrasco1.svg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco2.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco3.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco4.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco5.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco6.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco7.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                                <div class="carousel-item"
+                                    style="background-image: url(./assets/imagemChurrasco8.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Próximo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Churrascos</h3>
+                        <p class="eventos__texto">Nosso churrasco é preparado com cortes selecionados e técnicas que
+                            destacam o sabor e a
+                            suculência de cada peça. Com um cuidado especial em cada detalhe, oferecemos uma experiência
+                            autêntica, onde a qualidade e o sabor são prioridade. <br> Perfeito para qualquer ocasião, o
+                            churrasco é servido com acompanhamentos frescos e variados, garantindo uma refeição completa
+                            e
+                            saborosa para você e seus convidados.
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatos -->
+        <section class="cotatos" id="contatos">
+            <h2>Contatos</h2>
+            <div class="contatos__info">
+                <div class="contatos__texto">
+                    <h3>WhatsApp</h3>
+                    <p>( 11 ) 98253 5944</p>
+                    <h3>E-mail</h3>
+                    <p>edilsonjsilva12345@gmail.com</p>
+                </div>
+                <div><img src="./assets/sep.svg" alt="" class="sep"></div>
+                <div class="contatos__links">
+                    <h4>Links</h4>
+                    <div class="contatos__img--links">
+                        <a href="https://wa.me/11982535944" target="_blank" rel="noopener noreferrer"><img
+                                src="./assets/whatAppIcon.svg" alt="Icon WhatsApp"></a>
+                        <a href="https://www.instagram.com/edilsonjsilva26/" target="_blank"
+                            rel="noopener noreferrer"><img src="./assets/instagramIcon.svg" alt="Icon Instagram"></a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Atendimento somente na cidade de São Paulo e interior!!!</h3>
+
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

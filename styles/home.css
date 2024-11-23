@@ -1,0 +1,35 @@
+.home {
+    height: 100vh;
+    background-image: url('../assets/backgroundHomeMobile.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.home h1 {
+    position: absolute;
+    color: white;
+    bottom: 50%;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+
+@media (min-width:720px) {
+    .home h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:1080px) {
+    .home {
+        background-image: url('../assets/backgroundHome3.svg');
+    }
+    
+    .home h1 {
+        font-size: 4rem;
+    }
+}
