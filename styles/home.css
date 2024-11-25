@@ -1,8 +1,8 @@
 .home {
     height: 100vh;
-    background-image: url('../assets/backgroundHomeMobile.svg');
+    background-image: url('../assets/backgroundHomeMobile.png');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: cover;
     position: relative;
     background-attachment: fixed;
@@ -26,7 +26,7 @@
 
 @media (min-width:1080px) {
     .home {
-        background-image: url('../assets/backgroundHome3.svg');
+        background-image: url('../assets/backgroundHome3.png');
     }
     
     .home h1 {
