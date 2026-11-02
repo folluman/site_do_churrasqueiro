@@ -83,7 +83,16 @@ const observadorRevelar = new IntersectionObserver(entradas => {
 
 document.querySelectorAll('[data-revelar]').forEach(el => observadorRevelar.observe(el))
 
-// CONTADOR ANIMADO (15+ ANOS)
+// ANOS DE EXPERIENCIA - SOMA 1 ANO SOZINHO A CADA ANO NOVO
+// ANO EM QUE O EDILSON COMECOU (2008 = 18 ANOS EM 2026)
+const ANO_INICIO = 2008
+const anosExperiencia = new Date().getFullYear() - ANO_INICIO
+
+// ATUALIZA OS TEXTOS E O NUMERO FINAL DO CONTADOR
+document.querySelectorAll('.anos-experiencia').forEach(el => { el.textContent = anosExperiencia })
+document.querySelectorAll('[data-contador]').forEach(el => { el.dataset.contador = anosExperiencia })
+
+// CONTADOR ANIMADO (ANOS DE EXPERIENCIA)
 const observadorContador = new IntersectionObserver(entradas => {
     entradas.forEach(entrada => {
         if (!entrada.isIntersecting) return

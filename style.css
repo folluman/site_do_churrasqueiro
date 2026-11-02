@@ -288,7 +288,8 @@ button {
 }
 
 .header__marca img {
-    width: 44px;
+    /* ICONE UM POUCO MAIOR PARA LER MELHOR O TEXTO EM VOLTA */
+    width: 52px;
     height: auto;
     transition: transform .6s ease;
 }
