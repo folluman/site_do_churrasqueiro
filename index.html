@@ -1,282 +1,611 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ED Barbecue</title>
+
+    <!-- SEO PRINCIPAL -->
+    <title>ED Barbecue | Churrasqueiro para Eventos em São Paulo</title>
+    <meta name="description"
+        content="Churrasqueiro profissional com mais de 15 anos de experiência. Buffet de churrasco completo para casamentos, aniversários, eventos corporativos e confraternizações em São Paulo e interior. Peça seu orçamento!">
+    <meta name="keywords"
+        content="churrasqueiro, churrasco para eventos, buffet de churrasco, churrasqueiro São Paulo, churrasco casamento, churrasco aniversário, churrasco corporativo">
+    <meta name="author" content="ED Barbecue">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#161616">
+
+    <!-- COMPARTILHAMENTO EM REDES SOCIAIS -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="ED Barbecue">
+    <meta property="og:title" content="ED Barbecue | Churrasqueiro para Eventos em São Paulo">
+    <meta property="og:description"
+        content="Buffet de churrasco completo para o seu evento. Mais de 15 anos de experiência em São Paulo e interior.">
+    <meta property="og:image" content="./assets/img/og-ed-barbecue.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ICONE E FONTES -->
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CARREGA A IMAGEM DO TOPO PRIMEIRO -->
+    <link rel="preload" as="image" href="./assets/img/hero-churrasco.webp">
+
+    <!-- AVISA O CSS QUE O JAVASCRIPT ESTA ATIVO -->
+    <script>document.documentElement.classList.add('js')</script>
+
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="./scripts.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- DADOS ESTRUTURADOS PARA O GOOGLE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ED Barbecue",
+        "description": "Churrasqueiro profissional com mais de 15 anos de experiência em buffet de churrasco para eventos.",
+        "image": "./assets/img/og-ed-barbecue.jpg",
+        "logo": "./assets/img/favicon.svg",
+        "telephone": "+55 11 98253-5944",
+        "email": "edilsonjsilva12345@gmail.com",
+        "founder": { "@type": "Person", "name": "Edilson" },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "São Paulo" },
+            { "@type": "State", "name": "São Paulo" }
+        ],
+        "sameAs": ["https://www.instagram.com/edilsonjsilva26/"]
+    }
+    </script>
 </head>
 
 <body>
 
-    <!-- retirar o hidden futuramente -->
-    <main class="site__logging">
+    <!-- TELA DE CARREGAMENTO -->
+    <div class="loader" aria-hidden="true">
+        <div class="loader__anel"></div>
+        <img src="./assets/img/logo-ed-barbecue.svg" alt="" class="loader__logo" width="68" height="64">
+    </div>
 
-        <img src="./assets/logo.svg" alt="" class="logging__logo">
-        <img src="./assets/logging.svg" alt="" class="logging__load">
+    <a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
 
-    </main>
+    <!-- CABECALHO -->
+    <header class="header" id="header">
+        <div class="container header__conteudo">
+            <a href="#inicio" class="header__marca" aria-label="ED Barbecue - voltar ao início">
+                <img src="./assets/img/logo-ed-barbecue.svg" alt="Logo ED Barbecue" width="44" height="42">
+                <span>ED <strong>Barbecue</strong></span>
+            </a>
 
-    <!-- colocar o hidden futuramente-->
-    <main class="site__body hidden">
-        <!-- Header -->
-        <section class="section__header">
-            <header class="header">
-                <div class="header__menu">
-                    <img src="./assets/logo.svg" alt="Logo do Churrasqueiro" class="img__Logo">
-                    <img src="./assets/menu_hamburguer.svg" alt="Menu Hamburguer" class="img__menuHamburguer">
-                    <ol class="nav__ol">
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#fotos">Fotos</a></li>
-                        <li><a href="#contatos">Contatos</a></li>
+            <nav class="nav" id="nav" aria-label="Menu principal">
+                <ul class="nav__lista">
+                    <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                    <li><a href="#galeria" class="nav__link">Fotos</a></li>
+                    <li><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+                <a href="https://wa.me/5511982535944?text=Ol%C3%A1%20Edilson!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20churrasco%20para%20o%20meu%20evento."
+                    class="botao botao--brasa nav__cta" target="_blank" rel="noopener noreferrer">Pedir orçamento</a>
+            </nav>
+
+            <button class="menu-botao" id="menu-botao" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- TOPO / APRESENTACAO -->
+        <section class="hero" id="inicio">
+            <div class="hero__fundo" aria-hidden="true"></div>
+            <canvas class="hero__brasas" id="brasas" aria-hidden="true"></canvas>
+
+            <div class="container hero__conteudo">
+                <div class="hero__texto">
+                    <p class="hero__selo anima-entrada" style="--atraso: .1s">
+                        <span class="ponto-brasa"></span> Churrasqueiro profissional · São Paulo
+                    </p>
+                    <h1 class="hero__titulo anima-entrada" style="--atraso: .25s">
+                        Churrasco de verdade <span class="texto-brasa">para o seu evento</span>
+                    </h1>
+                    <p class="hero__descricao anima-entrada" style="--atraso: .4s">
+                        Mais de 15 anos transformando festas em experiências inesquecíveis, com cortes selecionados,
+                        acompanhamentos frescos e um serviço completo do início ao fim.
+                    </p>
+                    <div class="hero__botoes anima-entrada" style="--atraso: .55s">
+                        <a href="https://wa.me/5511982535944?text=Ol%C3%A1%20Edilson!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20churrasco%20para%20o%20meu%20evento."
+                            class="botao botao--brasa botao--grande" target="_blank" rel="noopener noreferrer">
+                            <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+                            Solicitar orçamento
+                        </a>
+                        <a href="#galeria" class="botao botao--contorno botao--grande">Ver fotos</a>
+                    </div>
+                </div>
+
+                <div class="hero__ilustracao anima-entrada" style="--atraso: .35s">
+                    <div class="hero__brilho" aria-hidden="true"></div>
+                    <img src="./assets/img/chef-ed-barbecue.webp"
+                        alt="Ilustração do churrasqueiro Edilson segurando o garfo de churrasco" width="835"
+                        height="869" class="hero__chef" id="hero-chef" fetchpriority="high">
+                </div>
+            </div>
+
+            <a href="#destaques" class="hero__rolar" aria-label="Rolar para baixo">
+                <span></span>
+            </a>
+        </section>
+
+        <!-- FAIXA ANIMADA DE CORTES -->
+        <div class="faixa" id="destaques" aria-label="Cortes e pratos servidos">
+            <div class="faixa__trilho">
+                <ul class="faixa__lista">
+                    <li>Picanha</li><li>Fraldinha</li><li>Costela</li><li>Linguiça</li><li>Espetinhos</li>
+                    <li>Frango na brasa</li><li>Queijo coalho</li><li>Pão de alho</li><li>Saladas</li>
+                </ul>
+                <ul class="faixa__lista" aria-hidden="true">
+                    <li>Picanha</li><li>Fraldinha</li><li>Costela</li><li>Linguiça</li><li>Espetinhos</li>
+                    <li>Frango na brasa</li><li>Queijo coalho</li><li>Pão de alho</li><li>Saladas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SOBRE -->
+        <section class="secao secao--clara sobre" id="sobre">
+            <div class="container sobre__grade">
+                <div class="sobre__foto" data-revelar="esquerda">
+                    <img src="./assets/img/edilson-churrasqueiro.webp"
+                        alt="Edilson, churrasqueiro da ED Barbecue, preparando carnes na churrasqueira" width="900"
+                        height="900" loading="lazy" decoding="async">
+                    <div class="sobre__experiencia">
+                        <strong><span data-contador="15">0</span>+</strong>
+                        <span>anos de<br>experiência</span>
+                    </div>
+                </div>
+
+                <div class="sobre__texto" data-revelar="direita">
+                    <p class="rotulo">Quem faz o seu churrasco</p>
+                    <h2 class="titulo-secao">Prazer, eu sou o <span class="texto-brasa">Edilson</span></h2>
+                    <p>
+                        Com 15 anos de experiência, sou especialista em churrasco para eventos e ofereço um serviço
+                        profissional e completo. Meu buffet inclui cortes selecionados e acompanhamentos frescos,
+                        preparados com técnica e cuidado.
+                    </p>
+                    <p>
+                        Cada detalhe é pensado para que você aproveite a festa ao lado dos seus convidados, enquanto
+                        eu cuido da brasa.
+                    </p>
+
+                    <ul class="sobre__lista">
+                        <li>
+                            <svg class="icone" aria-hidden="true"><use href="#icone-carne"></use></svg>
+                            Cortes selecionados
+                        </li>
+                        <li>
+                            <svg class="icone" aria-hidden="true"><use href="#icone-folha"></use></svg>
+                            Acompanhamentos frescos
+                        </li>
+                        <li>
+                            <svg class="icone" aria-hidden="true"><use href="#icone-fogo"></use></svg>
+                            Técnica no ponto certo
+                        </li>
+                        <li>
+                            <svg class="icone" aria-hidden="true"><use href="#icone-local"></use></svg>
+                            São Paulo e interior
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICOS -->
+        <section class="secao secao--escura servicos" id="servicos">
+            <div class="container">
+                <div class="cabecalho-secao" data-revelar>
+                    <p class="rotulo">Serviços</p>
+                    <h2 class="titulo-secao">Churrasco para todo tipo de <span class="texto-brasa">ocasião</span></h2>
+                    <p>Eventos de todos os tamanhos, com qualidade, praticidade e sabor em cada detalhe.</p>
+                </div>
+
+                <div class="servicos__grade">
+                    <article class="cartao" data-revelar style="--atraso: 0s">
+                        <div class="cartao__icone"><svg class="icone" aria-hidden="true"><use href="#icone-alianca"></use></svg></div>
+                        <h3>Casamentos</h3>
+                        <p>Um churrasco à altura do grande dia, servido com elegância para todos os convidados.</p>
+                    </article>
+                    <article class="cartao" data-revelar style="--atraso: .1s">
+                        <div class="cartao__icone"><svg class="icone" aria-hidden="true"><use href="#icone-bolo"></use></svg></div>
+                        <h3>Aniversários</h3>
+                        <p>Comemore com quem você ama, sem se preocupar com a churrasqueira.</p>
+                    </article>
+                    <article class="cartao" data-revelar style="--atraso: .2s">
+                        <div class="cartao__icone"><svg class="icone" aria-hidden="true"><use href="#icone-predio"></use></svg></div>
+                        <h3>Eventos corporativos</h3>
+                        <p>Integração de equipes e eventos da empresa com serviço pontual e profissional.</p>
+                    </article>
+                    <article class="cartao" data-revelar style="--atraso: .3s">
+                        <div class="cartao__icone"><svg class="icone" aria-hidden="true"><use href="#icone-brinde"></use></svg></div>
+                        <h3>Confraternizações</h3>
+                        <p>Fim de ano, reunião de amigos ou família: o churrasco perfeito para juntar a galera.</p>
+                    </article>
+                </div>
+
+                <!-- COMO FUNCIONA -->
+                <div class="etapas" data-revelar>
+                    <h3 class="etapas__titulo">Como funciona</h3>
+                    <ol class="etapas__lista">
+                        <li>
+                            <span class="etapas__numero">01</span>
+                            <div>
+                                <h4>Fale comigo</h4>
+                                <p>Me chame no WhatsApp com a data, o local e o número de convidados.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="etapas__numero">02</span>
+                            <div>
+                                <h4>Monte o cardápio</h4>
+                                <p>Escolhemos juntos os cortes e acompanhamentos ideais para o seu evento.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="etapas__numero">03</span>
+                            <div>
+                                <h4>Aproveite a festa</h4>
+                                <p>No dia, eu cuido de toda a brasa e você só curte com seus convidados.</p>
+                            </div>
+                        </li>
                     </ol>
                 </div>
-            </header>
-            <div class="header__links hidden">
-                <li class="nav_links hidden"><a href="#sobre">Sobre</a></li>
-                <li class="nav_links hidden"><a href="#fotos">Fotos</a></li>
-                <li class="nav_links hidden"><a href="#contatos">Contatos</a></li>
             </div>
         </section>
 
-        <!-- carousel -->
-        <section class="home">
-            <h1 class="home__apresentacao">Bem-Vindo ao seu melhor churrasco!</h1>
-        </section>
-
-        <!-- Sobre -->
-        <section class="sobre" id="sobre">
-            <img src="./assets/Ellipse.svg" alt="" class="ellipse">
-            <div class="sobre__img">
-                <img src="./assets/churrasqueiro.svg" alt="Imagem do churrasqueiro" class="img__churrasqueiro">
-            </div>
-            <div class="sobre__texto">
-                <h2>Sobre</h2>
-                <p class="sobre__paragrafo">Com 15 anos de experiência, Edilson é especialista em churrasco para
-                    eventos, oferecendo um serviço
-                    profissional e completo. Seu buffet inclui cortes selecionados e acompanhamentos frescos, preparados
-                    com técnica e cuidado, para que cada detalhe transforme seu evento em uma experiência única.
-                </p>
-            </div>
-        </section>
-
-        <!-- Fotos -->
-        <section class="imagens" id="fotos">
-            <div class="imagens__format">
-                <h2>Eventos & Churrascos</h2>
-                <div class="imagens__conteudo--eventos">
-                    <div class="imagens__conteudo--div">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active"
-                                    style="background-image: url(./assets/imageEventos1.svg); background-size: cover; background-repeat: no-repeat;  background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos2.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos3.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos4.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos5.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos6.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos7.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos8.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos9.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos10.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos11.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos12.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imageEventos13.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Anterior</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Próximo</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Eventos</h3>
-                        <p class="eventos__texto">Oferecemos um serviço profissional de churrasco para eventos de todos
-                            os tamanhos. Cada churrasco é cuidadosamente planejado para
-                            proporcionar a melhor experiência, com técnicas que
-                            valorizam o sabor e a tradição do verdadeiro churrasco brasileiro. <br> Seja para
-                            confraternizações, casamentos, aniversários ou eventos corporativos, garantimos qualidade,
-                            praticidade e sabor em cada detalhe.
-                        </p>
-                    </div>
+        <!-- GALERIA DE FOTOS -->
+        <section class="secao secao--clara galeria" id="galeria">
+            <div class="container">
+                <div class="cabecalho-secao" data-revelar>
+                    <p class="rotulo">Galeria</p>
+                    <h2 class="titulo-secao">Eventos &amp; <span class="texto-brasa">churrascos</span></h2>
+                    <p>Um pouco do que já preparamos. Clique em uma foto para ampliar.</p>
                 </div>
 
-                <div class="imagens__conteudo--churrascos">
-                    <div class="imagens__conteudo--div2">
-                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active"
-                                    style="background-image: url(./assets/imagemChurrasco9.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco2.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco3.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco4.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco5.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco6.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco7.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco8.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco10.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco11.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco12.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco13.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                                <div class="carousel-item"
-                                    style="background-image: url(./assets/imagemChurrasco14.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Anterior</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Próximo</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Churrascos</h3>
-                        <p class="eventos__texto">Nosso churrasco é preparado com técnicas que
-                            destacam o sabor e a
-                            suculência de cada peça. Com um cuidado especial em cada detalhe, oferecemos uma experiência
-                            autêntica, onde a qualidade e o sabor são prioridade. <br> Perfeito para qualquer ocasião, o
-                            churrasco é servido com sabor e qualidade, garantindo uma refeição completa
-                            e
-                            saborosa para você e seus convidados.
-                    </div>
-                    </p>
+                <div class="galeria__filtros" role="group" aria-label="Filtrar fotos" data-revelar>
+                    <button class="filtro ativo" data-filtro="todos" aria-pressed="true">Todas</button>
+                    <button class="filtro" data-filtro="churrasco" aria-pressed="false">Churrascos</button>
+                    <button class="filtro" data-filtro="evento" aria-pressed="false">Eventos</button>
+                </div>
+
+                <div class="galeria__grade" id="galeria-grade">
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/picanha-e-linguica-na-grelha.webp" class="galeria__link" data-legenda="Picanha e linguiça na grelha">
+                            <img src="./assets/galeria/picanha-e-linguica-na-grelha-p.webp" alt="Picanha e linguiça na grelha - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Picanha e linguiça na grelha</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/buffet-completo-para-eventos.webp" class="galeria__link" data-legenda="Buffet completo montado para evento">
+                            <img src="./assets/galeria/buffet-completo-para-eventos-p.webp" alt="Buffet completo montado para evento - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Buffet completo montado para evento</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/espetos-de-queijo-coalho-linguica-e-kafta.webp" class="galeria__link" data-legenda="Espetos de queijo coalho, linguiça e kafta">
+                            <img src="./assets/galeria/espetos-de-queijo-coalho-linguica-e-kafta-p.webp" alt="Espetos de queijo coalho, linguiça e kafta - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Espetos de queijo coalho, linguiça e kafta</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/saladas-frescas-no-buffet.webp" class="galeria__link" data-legenda="Saladas frescas no buffet">
+                            <img src="./assets/galeria/saladas-frescas-no-buffet-p.webp" alt="Saladas frescas no buffet - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Saladas frescas no buffet</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/carne-fatiada-ao-ponto.webp" class="galeria__link" data-legenda="Carne fatiada no ponto certo">
+                            <img src="./assets/galeria/carne-fatiada-ao-ponto-p.webp" alt="Carne fatiada no ponto certo - ED Barbecue" width="480" height="640" loading="lazy" decoding="async">
+                            <figcaption>Carne fatiada no ponto certo</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/bar-de-drinks-no-evento.webp" class="galeria__link" data-legenda="Bar de drinks no evento">
+                            <img src="./assets/galeria/bar-de-drinks-no-evento-p.webp" alt="Bar de drinks no evento - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Bar de drinks no evento</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/linguica-frango-e-pao-de-alho.webp" class="galeria__link" data-legenda="Linguiça, frango e pão de alho na brasa">
+                            <img src="./assets/galeria/linguica-frango-e-pao-de-alho-p.webp" alt="Linguiça, frango e pão de alho na brasa - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Linguiça, frango e pão de alho na brasa</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/decoracao-festa-de-15-anos.webp" class="galeria__link" data-legenda="Decoração de festa de 15 anos">
+                            <img src="./assets/galeria/decoracao-festa-de-15-anos-p.webp" alt="Decoração de festa de 15 anos - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Decoração de festa de 15 anos</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/costela-ao-molho-barbecue.webp" class="galeria__link" data-legenda="Costela ao molho barbecue">
+                            <img src="./assets/galeria/costela-ao-molho-barbecue-p.webp" alt="Costela ao molho barbecue - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Costela ao molho barbecue</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/rechauds-com-acompanhamentos.webp" class="galeria__link" data-legenda="Rechauds com acompanhamentos">
+                            <img src="./assets/galeria/rechauds-com-acompanhamentos-p.webp" alt="Rechauds com acompanhamentos - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Rechauds com acompanhamentos</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/espetinhos-em-dois-niveis.webp" class="galeria__link" data-legenda="Espetinhos assando em dois níveis">
+                            <img src="./assets/galeria/espetinhos-em-dois-niveis-p.webp" alt="Espetinhos assando em dois níveis - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Espetinhos assando em dois níveis</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/mesa-de-frutas-e-drinks.webp" class="galeria__link" data-legenda="Mesa de frutas e drinks">
+                            <img src="./assets/galeria/mesa-de-frutas-e-drinks-p.webp" alt="Mesa de frutas e drinks - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Mesa de frutas e drinks</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/picanha-assada-na-tabua.webp" class="galeria__link" data-legenda="Picanha assada servida na tábua">
+                            <img src="./assets/galeria/picanha-assada-na-tabua-p.webp" alt="Picanha assada servida na tábua - ED Barbecue" width="480" height="640" loading="lazy" decoding="async">
+                            <figcaption>Picanha assada servida na tábua</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/mesa-de-acompanhamentos.webp" class="galeria__link" data-legenda="Mesa de acompanhamentos">
+                            <img src="./assets/galeria/mesa-de-acompanhamentos-p.webp" alt="Mesa de acompanhamentos - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Mesa de acompanhamentos</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/frango-na-brasa.webp" class="galeria__link" data-legenda="Frango na brasa">
+                            <img src="./assets/galeria/frango-na-brasa-p.webp" alt="Frango na brasa - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Frango na brasa</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/festa-tematica.webp" class="galeria__link" data-legenda="Festa temática">
+                            <img src="./assets/galeria/festa-tematica-p.webp" alt="Festa temática - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Festa temática</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/carnes-e-legumes-na-grelha.webp" class="galeria__link" data-legenda="Carnes e legumes na grelha">
+                            <img src="./assets/galeria/carnes-e-legumes-na-grelha-p.webp" alt="Carnes e legumes na grelha - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Carnes e legumes na grelha</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/bar-rustico-de-bebidas.webp" class="galeria__link" data-legenda="Bar rústico de bebidas">
+                            <img src="./assets/galeria/bar-rustico-de-bebidas-p.webp" alt="Bar rústico de bebidas - ED Barbecue" width="512" height="640" loading="lazy" decoding="async">
+                            <figcaption>Bar rústico de bebidas</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/cortes-de-carne-na-tabua.webp" class="galeria__link" data-legenda="Cortes de carne na tábua">
+                            <img src="./assets/galeria/cortes-de-carne-na-tabua-p.webp" alt="Cortes de carne na tábua - ED Barbecue" width="480" height="640" loading="lazy" decoding="async">
+                            <figcaption>Cortes de carne na tábua</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/salada-verde-colorida.webp" class="galeria__link" data-legenda="Salada verde colorida">
+                            <img src="./assets/galeria/salada-verde-colorida-p.webp" alt="Salada verde colorida - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Salada verde colorida</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/carnes-na-churrasqueira.webp" class="galeria__link" data-legenda="Carnes na churrasqueira">
+                            <img src="./assets/galeria/carnes-na-churrasqueira-p.webp" alt="Carnes na churrasqueira - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Carnes na churrasqueira</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/frutas-frescas.webp" class="galeria__link" data-legenda="Frutas frescas para o evento">
+                            <img src="./assets/galeria/frutas-frescas-p.webp" alt="Frutas frescas para o evento - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Frutas frescas para o evento</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/espetinhos-na-brasa.webp" class="galeria__link" data-legenda="Espetinhos na brasa">
+                            <img src="./assets/galeria/espetinhos-na-brasa-p.webp" alt="Espetinhos na brasa - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Espetinhos na brasa</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/mesa-de-bebidas-e-morangos.webp" class="galeria__link" data-legenda="Mesa de bebidas e morangos">
+                            <img src="./assets/galeria/mesa-de-bebidas-e-morangos-p.webp" alt="Mesa de bebidas e morangos - ED Barbecue" width="640" height="640" loading="lazy" decoding="async">
+                            <figcaption>Mesa de bebidas e morangos</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/carne-assada-a-beira-da-piscina.webp" class="galeria__link" data-legenda="Carne assada servida à beira da piscina">
+                            <img src="./assets/galeria/carne-assada-a-beira-da-piscina-p.webp" alt="Carne assada servida à beira da piscina - ED Barbecue" width="480" height="640" loading="lazy" decoding="async">
+                            <figcaption>Carne assada servida à beira da piscina</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="evento">
+                        <a href="./assets/galeria/acompanhamentos-caseiros.webp" class="galeria__link" data-legenda="Acompanhamentos caseiros">
+                            <img src="./assets/galeria/acompanhamentos-caseiros-p.webp" alt="Acompanhamentos caseiros - ED Barbecue" width="640" height="480" loading="lazy" decoding="async">
+                            <figcaption>Acompanhamentos caseiros</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="galeria__item" data-categoria="churrasco">
+                        <a href="./assets/galeria/espetinhos-na-churrasqueira.webp" class="galeria__link" data-legenda="Espetinhos na churrasqueira">
+                            <img src="./assets/galeria/espetinhos-na-churrasqueira-p.webp" alt="Espetinhos na churrasqueira - ED Barbecue" width="480" height="640" loading="lazy" decoding="async">
+                            <figcaption>Espetinhos na churrasqueira</figcaption>
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="galeria__mais">
+                    <button class="botao botao--escuro" id="ver-mais">Ver mais fotos</button>
                 </div>
             </div>
         </section>
 
-        <!-- Contatos -->
-        <section class="cotatos" id="contatos">
-            <h2>Contatos</h2>
-            <div class="contatos__info">
-                <div class="contatos__texto">
-                    <h3>WhatsApp</h3>
-                    <p>( 11 ) 98253 5944</p>
-                    <h3>E-mail</h3>
-                    <p>edilsonjsilva12345@gmail.com</p>
+        <!-- CHAMADA PARA ORCAMENTO -->
+        <section class="chamada" aria-labelledby="chamada-titulo">
+            <div class="container chamada__conteudo">
+                <div class="chamada__ilustracao" data-revelar="esquerda">
+                    <svg class="chamada__fumaca" viewBox="0 0 120 120" aria-hidden="true">
+                        <path d="M30 110 C 20 90, 40 80, 30 60 S 40 30, 30 10" />
+                        <path d="M60 110 C 50 90, 70 80, 60 60 S 70 30, 60 10" />
+                        <path d="M90 110 C 80 90, 100 80, 90 60 S 100 30, 90 10" />
+                    </svg>
+                    <img src="./assets/img/churrasqueira-ilustracao.webp"
+                        alt="Ilustração de churrasqueira com dois bifes na grelha" width="458" height="636"
+                        loading="lazy" decoding="async">
                 </div>
-                <div><img src="./assets/sep.svg" alt="" class="sep"></div>
-                <div class="contatos__links">
-                    <h4>Links</h4>
-                    <div class="contatos__img--links">
-                        <a href="https://wa.me/11982535944" target="_blank" rel="noopener noreferrer"><img
-                                src="./assets/whatAppIcon.svg" alt="Icon WhatsApp"></a>
-                        <a href="https://www.instagram.com/edilsonjsilva26/" target="_blank"
-                            rel="noopener noreferrer"><img src="./assets/instagramIcon.svg" alt="Icon Instagram"></a>
-                    </div>
+                <div class="chamada__texto" data-revelar="direita">
+                    <h2 id="chamada-titulo" class="titulo-secao">Vamos acender a brasa do <span
+                            class="texto-brasa">seu evento?</span></h2>
+                    <p>Me conte a data, o local e quantos convidados você espera. Respondo rapidinho com um orçamento
+                        sob medida.</p>
+                    <a href="https://wa.me/5511982535944?text=Ol%C3%A1%20Edilson!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20churrasco%20para%20o%20meu%20evento."
+                        class="botao botao--brasa botao--grande" target="_blank" rel="noopener noreferrer">
+                        <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+                        Chamar no WhatsApp
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <h3>Atendimento somente na cidade de São Paulo e interior!!!</h3>
+        <!-- CONTATO -->
+        <section class="secao secao--escura contato" id="contato">
+            <div class="container">
+                <div class="cabecalho-secao" data-revelar>
+                    <p class="rotulo">Contato</p>
+                    <h2 class="titulo-secao">Fale com a <span class="texto-brasa">ED Barbecue</span></h2>
+                    <p>Atendimento somente na cidade de São Paulo e interior.</p>
+                </div>
 
+                <div class="contato__grade">
+                    <a href="https://wa.me/5511982535944" class="contato__cartao" target="_blank"
+                        rel="noopener noreferrer" data-revelar style="--atraso: 0s">
+                        <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 98253-5944</p>
+                    </a>
+                    <a href="mailto:edilsonjsilva12345@gmail.com" class="contato__cartao" data-revelar
+                        style="--atraso: .1s">
+                        <svg class="icone" aria-hidden="true"><use href="#icone-email"></use></svg>
+                        <h3>E-mail</h3>
+                        <p>edilsonjsilva12345@gmail.com</p>
+                    </a>
+                    <a href="https://www.instagram.com/edilsonjsilva26/" class="contato__cartao" target="_blank"
+                        rel="noopener noreferrer" data-revelar style="--atraso: .2s">
+                        <svg class="icone" aria-hidden="true"><use href="#icone-instagram"></use></svg>
+                        <h3>Instagram</h3>
+                        <p>@edilsonjsilva26</p>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <!-- RODAPE -->
+    <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <a href="#inicio" class="header__marca" aria-label="ED Barbecue - voltar ao início">
+                <img src="./assets/img/logo-ed-barbecue.svg" alt="" width="44" height="42" loading="lazy">
+                <span>ED <strong>Barbecue</strong></span>
+            </a>
+            <nav aria-label="Links do rodapé">
+                <ul class="rodape__links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Fotos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <p class="rodape__copy">© <span id="ano">2026</span> ED Barbecue · Churrasqueiro para eventos em São Paulo
+            </p>
+        </div>
+    </footer>
+
+    <!-- BOTAO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5511982535944?text=Ol%C3%A1%20Edilson!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20churrasco%20para%20o%20meu%20evento."
+        class="whatsapp-flutuante" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+        <svg class="icone" aria-hidden="true"><use href="#icone-whatsapp"></use></svg>
+    </a>
+
+    <!-- JANELA PARA AMPLIAR AS FOTOS -->
+    <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+        <button class="lightbox__fechar" id="lightbox-fechar" aria-label="Fechar">&times;</button>
+        <button class="lightbox__seta lightbox__seta--anterior" id="lightbox-anterior" aria-label="Foto anterior">&#8249;</button>
+        <figure class="lightbox__figura">
+            <img src="" alt="" id="lightbox-imagem">
+            <figcaption id="lightbox-legenda"></figcaption>
+        </figure>
+        <button class="lightbox__seta lightbox__seta--proxima" id="lightbox-proxima" aria-label="Próxima foto">&#8250;</button>
+    </dialog>
+
+    <!-- ICONES SVG REUTILIZAVEIS -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icone-whatsapp" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.42 9.44c0 5.2-4.23 9.43-9.43 9.43m8.02-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.72 5.8.72 12.05c0 2 .52 3.95 1.52 5.66L.62 23.6l6.02-1.58a11.3 11.3 0 0 0 5.4 1.38h.01c6.25 0 11.33-5.08 11.34-11.33 0-3.03-1.18-5.88-3.32-8.02" />
+        </symbol>
+        <symbol id="icone-instagram" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+        </symbol>
+        <symbol id="icone-email" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icone-fogo" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M12 2s5 4.5 5 10a5 5 0 0 1-10 0c0-2.2 1-3.8 2-5 0 2 1 3 2 3 0-3 1-5.5 1-8Z" />
+        </symbol>
+        <symbol id="icone-carne" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M14.5 3C9 3 4 7 4 12.5 4 17 7.5 20 11 20c2 0 3-1.5 5-2.5S21 15 21 10c0-4-3-7-6.5-7Z" />
+            <circle cx="14" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="2" />
+        </symbol>
+        <symbol id="icone-folha" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15Zm0 0 8-8" />
+        </symbol>
+        <symbol id="icone-local" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" />
+            <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2" />
+        </symbol>
+        <symbol id="icone-alianca" viewBox="0 0 24 24">
+            <circle cx="9" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="15" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="m10 3 2 3 2-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icone-bolo" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M4 21h16v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8Zm0-5c2 1.5 4 1.5 5.33 0 1.34 1.5 3.34 1.5 5.34 0 1.33 1.5 3.33 1.5 5.33 0M12 11V7m0-4 .01 0" />
+        </symbol>
+        <symbol id="icone-predio" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m0-10h2a2 2 0 0 1 2 2v8M2 21h20M8 7h4m-4 4h4m-4 4h4" />
+        </symbol>
+        <symbol id="icone-brinde" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M8 2h4l-.5 7a2.5 2.5 0 0 1-3 0L8 2Zm2 8v8m-2.5 3h5M14 4h4l-.5 7a2.5 2.5 0 0 1-3 0L14 4Zm2 8v6m-2 3h4" />
+        </symbol>
+    </svg>
 
 </body>
 
