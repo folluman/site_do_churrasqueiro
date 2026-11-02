@@ -193,6 +193,15 @@ button {
     place-items: center;
     background: var(--grafite);
     transition: opacity .6s ease, visibility .6s ease;
+    /* SEGURANCA: SOME SOZINHO DEPOIS DE 3S MESMO SE O JAVASCRIPT FALHAR */
+    animation: sumirLoader .6s ease 3s forwards;
+}
+
+@keyframes sumirLoader {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .loader__anel,
@@ -658,6 +667,8 @@ button {
 .js .anima-entrada {
     opacity: 0;
     transform: translateY(30px);
+    /* SEGURANCA: APARECE SOZINHO SE O JAVASCRIPT FALHAR */
+    animation: entrada .9s cubic-bezier(.2, .7, .2, 1) calc(3s + var(--atraso, 0s)) forwards;
 }
 
 .js.carregado .anima-entrada {
@@ -849,22 +860,22 @@ button {
 }
 
 /* REVELAR AO ROLAR A PAGINA */
-.js [data-revelar] {
+.js-ok [data-revelar] {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1);
     transition-delay: var(--atraso, 0s);
 }
 
-.js [data-revelar="esquerda"] {
+.js-ok [data-revelar="esquerda"] {
     transform: translateX(-60px);
 }
 
-.js [data-revelar="direita"] {
+.js-ok [data-revelar="direita"] {
     transform: translateX(60px);
 }
 
-.js [data-revelar].revelado {
+.js-ok [data-revelar].revelado {
     opacity: 1;
     transform: none;
 }

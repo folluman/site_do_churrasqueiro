@@ -3,6 +3,8 @@
 // =========================================================
 
 const raiz = document.documentElement
+// AVISA O CSS QUE O SCRIPT RODOU DE VERDADE
+raiz.classList.add('js-ok')
 const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 // ESCONDE A TELA DE CARREGAMENTO QUANDO O SITE TERMINA DE CARREGAR
@@ -15,9 +17,14 @@ function finalizarCarregamento() {
     setTimeout(() => raiz.classList.add('carregado'), espera)
 }
 
-window.addEventListener('load', finalizarCarregamento)
+// LIBERA O SITE ASSIM QUE O CONTEUDO ESTIVER PRONTO (NAO ESPERA TODAS AS IMAGENS)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', finalizarCarregamento)
+} else {
+    finalizarCarregamento()
+}
 // SEGURANCA: SE ALGO DEMORAR DEMAIS, LIBERA O SITE MESMO ASSIM
-setTimeout(finalizarCarregamento, 2500)
+setTimeout(finalizarCarregamento, 1500)
 
 // CABECALHO MUDA DE COR AO ROLAR + MOSTRA BOTAO DO WHATSAPP
 const header = document.getElementById('header')
@@ -37,7 +44,7 @@ const menuBotao = document.getElementById('menu-botao')
 const linksMenu = document.querySelectorAll('.nav a')
 
 function alternarMenu(abrir) {
-    const aberto = abrir ?? !document.body.classList.contains('menu-aberto')
+    const aberto = typeof abrir === 'boolean' ? abrir : !document.body.classList.contains('menu-aberto')
     document.body.classList.toggle('menu-aberto', aberto)
     document.body.classList.toggle('travado', aberto)
     menuBotao.setAttribute('aria-expanded', aberto)
@@ -262,6 +269,8 @@ function mostrarFoto(indice) {
 document.getElementById('galeria-grade').addEventListener('click', e => {
     const link = e.target.closest('.galeria__link')
     if (!link) return
+    // NAVEGADOR ANTIGO SEM SUPORTE: ABRE A FOTO NORMALMENTE
+    if (typeof lightbox.showModal !== 'function') return
     e.preventDefault()
     mostrarFoto(fotosVisiveis().indexOf(link))
     lightbox.showModal()
