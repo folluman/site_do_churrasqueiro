@@ -1464,9 +1464,11 @@ button {
 /* FUMACA ANIMADA SAINDO DA CHURRASQUEIRA */
 .chamada__fumaca {
     position: absolute;
-    top: 2%;
+    /* FUMACA COMECA LOGO ACIMA DOS BIFES */
+    bottom: 78%;
     left: 50%;
-    width: 42%;
+    z-index: 1;
+    width: 34%;
     translate: -50% 0;
     overflow: visible;
 }
